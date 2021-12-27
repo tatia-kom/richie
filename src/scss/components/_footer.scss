@@ -1,0 +1,122 @@
+$footer: '.footer';
+$footerSoc: '.footer-socials';
+
+#{$footer} {
+  padding-bottom: 39px;
+
+  @media (max-width: $xs) {
+    padding-bottom: 33px;
+  }
+
+  &__flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: $xs) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &--bordered {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      margin-top: 32px;
+      padding-top: 32px;
+
+      @media (max-width: $xs) {
+        margin-top: 30px;
+        padding-top: 22px;
+        flex-direction: column-reverse;
+      }
+    }
+  }
+
+  &__logo {
+    color: white;
+    font-family: $fontPrimary;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 36px;
+    text-transform: uppercase;
+
+    @media (max-width: $sm) {
+      font-size: 24px;
+      line-height: 24px;
+    }
+  }
+
+  &__payments {
+    display: flex;
+
+    @media (max-width: $xs) {
+      margin-top: 30px;
+    }
+
+    img {
+      margin: 0 12px;
+
+      @media (max-width: $sm) {
+        margin: 0 6px;
+      }
+      @media (max-width: $xs) {
+        margin: 0 10px;
+        max-width: 45px;
+
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+  &__copyright {
+    font-family: $fontSecondary;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 140%;
+    color: rgba(255,255,255,0.7);
+
+    @media (max-width: $sm) {
+      font-size: 14px;
+    }
+    @media (max-width: $xs) {
+      margin-top: 12px;
+    }
+  }
+
+  &__rules {
+    font-family: $fontSecondary;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 140%;
+    color: rgba(255,255,255,0.7);
+    text-decoration: underline;
+
+    @media (max-width: $sm) {
+      font-size: 14px;
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+#{$footerSoc} {
+  display: flex;
+
+  @media (max-width: $xs) {
+    margin-top: 30px;
+  }
+
+  &__item {
+    margin-left: 32px;
+
+    @media (max-width: $sm) {
+      margin-left: 16px;
+    }
+    @media (max-width: $xs) {
+      margin: 0 28px 0 0;
+    }
+  }
+}

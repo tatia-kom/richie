@@ -1,0 +1,139 @@
+$reviews: '.reviews';
+
+#{$reviews} {
+  padding: 138px 0 168px;
+
+  @media (max-width: $sm) {
+    padding: 56px 0;
+  }
+  @media (max-width: $xs) {
+    padding: 70px 0;
+  }
+
+  &__flex {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  &__content {
+    width: calc(50% - 25px);
+    margin-top: 30px;
+
+    @media (max-width: $sm) {
+      width: 100%;
+    }
+    @media (max-width: $xs) {
+      margin-top: 0;
+    }
+  }
+
+  &__title {
+    font-family: $fontPrimary;
+    font-weight: bold;
+    font-size: 58px;
+    line-height: 130%;
+    text-transform: uppercase;
+
+    @media (max-width: $xs) {
+      font-size: 30px;
+      line-height: 120%;
+      text-align: center;
+    }
+  }
+
+  &__yandex {
+    margin-top: 24px;
+    display: flex;
+
+    @media (max-width: $xs) {
+      margin-top: 6px;
+      justify-content: center;
+
+      img {
+        max-width: 135px;
+      }
+    }
+  }
+
+  &__rate {
+    background: radial-gradient(50% 50% at 50% 50%, #FAE3A5 0%, #FFCA3E 100%);
+    width: 123px;
+    height: 123px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $black;
+    font-family: $fontPrimary;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 40px;
+    margin-left: 45px;
+
+    @media (max-width: $xs) {
+      margin-left: 24px;
+      width: 64px;
+      height: 64px;
+      font-size: 18px;
+      line-height: 18px;
+    }
+
+    span {
+      position: relative;
+      padding-left: 34px;
+      margin-top: 5px;
+
+      @media (max-width: $xs) {
+        padding-left: 19px;
+      }
+
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 34px;
+        height: 34px;
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='30' height='29' viewBox='0 0 30 29' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M14.3823 1.52702C14.6816 0.605714 15.985 0.605716 16.2844 1.52703L19.0004 9.88603C19.1343 10.2981 19.5182 10.577 19.9515 10.577H28.7406C29.7094 10.577 30.1121 11.8166 29.3284 12.386L22.2178 17.5522C21.8673 17.8068 21.7207 18.2582 21.8545 18.6702L24.5706 27.0292C24.8699 27.9505 23.8154 28.7167 23.0317 28.1473L15.9211 22.9811C15.5706 22.7265 15.096 22.7265 14.7455 22.9811L7.63495 28.1473C6.85124 28.7167 5.79676 27.9505 6.09611 27.0292L8.81212 18.6702C8.94599 18.2582 8.79933 17.8068 8.44885 17.5522L1.33825 12.386C0.554537 11.8166 0.957314 10.577 1.92604 10.577H10.7152C11.1484 10.577 11.5324 10.2981 11.6663 9.88603L14.3823 1.52702Z' fill='%230F1C24'/%3e%3c/svg%3e ");
+        background-repeat: no-repeat;
+        background-position: center;
+        left: 0;
+        top: 0;
+
+        @media (max-width: $xs) {
+          width: 17px;
+          height: 17px;
+          background-size: contain;
+          top: -1px;
+        }
+      }
+    }
+  }
+
+  &__widget {
+    width: calc(50% - 25px);
+    height: 504px;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    @media (max-width: $sm) {
+      position: relative;
+      width: 100%;
+      margin-top: 56px;
+    }
+    @media (max-width: $xs) {
+      margin-top: 35px;
+      height: 793px;
+    }
+  }
+
+  &__buttons {
+    margin-top: 68px;
+
+    @media (max-width: $xs) {
+      margin-top: 35px;
+    }
+  }
+}

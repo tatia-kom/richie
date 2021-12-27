@@ -1,0 +1,74 @@
+$top: '.top';
+
+#{$top} {
+  padding: 48px 16px 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+
+  @media (max-width: $xs) {
+    padding: 31px 16px 70px;
+  }
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 634px;
+    height: 634px;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='1234' height='1066' viewBox='0 0 1234 1066' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg opacity='0.2' filter='url(%23filter0_f_317_2012)'%3e%3ccircle cx='617' cy='449' r='317' fill='white'/%3e%3c/g%3e%3cdefs%3e%3cfilter id='filter0_f_317_2012' x='0' y='-168' width='1234' height='1234' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3e%3cfeFlood flood-opacity='0' result='BackgroundImageFix'/%3e%3cfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3e%3cfeGaussianBlur stdDeviation='150' result='effect1_foregroundBlur_317_2012'/%3e%3c/filter%3e%3c/defs%3e%3c/svg%3e ");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 132px;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none;
+
+    @media (max-width: $xs) {
+      width: 273px;
+      height: 273px;
+      top: 127px;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='320' height='700' viewBox='0 0 320 700' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg opacity='0.4' filter='url(%23filter0_f_335_1638)'%3e%3ccircle cx='160.5' cy='263.5' r='136.5' fill='white'/%3e%3c/g%3e%3cdefs%3e%3cfilter id='filter0_f_335_1638' x='-276' y='-173' width='873' height='873' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3e%3cfeFlood flood-opacity='0' result='BackgroundImageFix'/%3e%3cfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3e%3cfeGaussianBlur stdDeviation='150' result='effect1_foregroundBlur_335_1638'/%3e%3c/filter%3e%3c/defs%3e%3c/svg%3e ");
+    }
+  }
+
+  &__logo {
+    @media (max-width: $xs) {
+      max-width: 124px;
+    }
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__title {
+    font-family: $fontPrimary;
+    font-size: 100px;
+    line-height: 120%;
+    color: white;
+    text-align: center;
+    margin-top: 85px;
+    text-transform: uppercase;
+
+    @media (max-width: $xs) {
+      margin-top: 48px;
+      font-size: 48px;
+    }
+
+    strong {
+      display: block;
+    }
+  }
+
+  &__button {
+    margin-top: 69px;
+
+    @media (max-width: $xs) {
+      margin-top: 24px;
+    }
+  }
+}

@@ -1,0 +1,217 @@
+$gifts: '.gifts';
+$giftsLine: '.gifts-line';
+
+#{$gifts} {
+  padding: 50px 0 85px;
+  position: relative;
+  overflow: hidden;
+
+  @media (max-width: $sm) {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 0;
+  }
+
+  &__content {
+    @media (max-width: $sm) {
+      width: 100%;
+      margin-top: 48px;
+    }
+    @media (max-width: $xs) {
+      margin-top: 30px;
+    }
+  }
+
+  &__title {
+    margin-left: calc(50% + 20px);
+    font-family: $fontPrimary;
+    font-size: 58px;
+    line-height: 130%;
+    text-transform: uppercase;
+
+    @media (max-width: $sm) {
+      margin-left: 48px;
+    }
+    @media (max-width: $xs) {
+      margin: 0 16px;
+      font-size: 30px;
+      line-height: 120%;
+    }
+
+    strong {
+      display: block;
+      line-height: 120%;
+
+      @media (max-width: $xs) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &__buttons {
+    margin: 80px 0 0 calc(50% + 20px);
+
+    @media (max-width: $sm) {
+      margin-left: 0;
+    }
+    @media (max-width: $xs) {
+      margin-top: 42px;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    right: calc(50% + 20px);
+
+    @media (max-width: $sm) {
+      position: relative;
+      top: auto;
+      right: auto;
+      width: 520px;
+      height: 600px;
+    }
+    @media (max-width: $xs) {
+      width: 228px;
+      height: 270px;
+    }
+
+    img {
+      position: absolute;
+
+      &:nth-child(1) {
+        top: 0;
+        right: 168px;
+        max-width: 445px;
+
+        @media (max-width: $sm) {
+          top: -36px;
+          right: 112px;
+        }
+        @media (max-width: $xs) {
+          max-width: 200px;
+          top: -15px;
+          right: 55px;
+        }
+      }
+      &:nth-child(2) {
+        top: 105px;
+        right: 0;
+        max-width: 415px;
+
+        @media (max-width: $sm) {
+          top: 69px;
+          right: -56px;
+        }
+        @media (max-width: $xs) {
+          max-width: 186px;
+          top: 30px;
+          right: -25px;
+        }
+      }
+    }
+  }
+}
+
+#{$giftsLine} {
+  background: $primary;
+  padding: 16px 16px 16px calc(50% + 20px);
+  color: $black;
+  position: relative;
+  margin-top: 55px;
+
+  @media (max-width: $sm) {
+    padding-left: 48px;
+  }
+  @media (max-width: $xs) {
+    padding-left: 16px;
+    margin-top: 43px;
+  }
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    height: 11px;
+    background: url('../img/gifts-border.png') repeat-x;
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 11px;
+    background: url('../img/gifts-border.png') repeat-x;
+    transform: scale(1,-1);
+  }
+
+  &__title {
+    font-family: $fontSecondary;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 128.4%;
+    text-transform: uppercase;
+
+    @media (max-width: $sm) {
+      text-align: center;
+    }
+    @media (max-width: $xs) {
+      font-size: 18px;
+    }
+  }
+
+  &__flex {
+    display: flex;
+    align-items: center;
+    margin: 8px 0 0 10px;
+
+    @media (max-width: $sm) {
+      margin: 8px 0 0 10px;
+      justify-content: center;
+    }
+  }
+
+  &__gift {
+    width: 87px;
+
+    @media (max-width: $xs) {
+      width: 63px;
+    }
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__number {
+    margin: 8px 0 0 34px;
+    font-family: $fontPrimary;
+    font-weight: bold;
+    font-size: 83px;
+
+    @media (max-width: $xs) {
+      margin-left: 19px;
+      font-size: 64px;
+    }
+  }
+
+  &__text {
+    margin-left: 16px;
+    font-family: $fontPrimary;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 120%;
+
+    @media (max-width: $xs) {
+      margin-left: 9px;
+      font-size: 24px;
+    }
+  }
+}
